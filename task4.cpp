@@ -84,7 +84,7 @@ int main()
 {
 	float a, b, d;
 	int z = 0;
-	cout << "Choose the task, please:" << endl;
+	cout << "You have to choose task" << endl;
 	cin >> z;
 	switch (z)
 	{
