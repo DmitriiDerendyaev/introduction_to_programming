@@ -31,10 +31,23 @@ string task2(float A, float B, float C)
 
 }
 
+string task3(float A, float B, float C)
+{
+	string strok3;
+	float AC, BC, AC_add_BC;
+	AC = abs(C - A);
+	BC = abs(B - C);
+	AC_add_BC = AC + BC;
+	strok3 += "Multiplication AC*BC = ";
+	strok3 += to_string(AC_add_BC);
+	return strok3;
+
+}
+
 int main()
 {
 	int z = 0;
-	float x1, x2, y1, y2, AC, BC, AC_BC, A, B, C;
+	float x1, x2, y1, y2, AC, BC, AC_BC, A, B, C, AC_add_BC;
 	cin >> z;
 	switch (z)
 	{
@@ -48,6 +61,12 @@ int main()
 		cout << "Pleace enter the values of variables:" << endl;
 		cin >> A >> B >> C;
 		cout << task2(A, B, C) << endl;
+	}
+	case 3:
+	{
+		cout << "Pleace enter the values of variables:" << endl;
+		cin >> A >> B >> C;
+		cout << task3(A, B, C) << endl; 
 	}
 	}
 
