@@ -35,6 +35,7 @@ int main()
 {
 	int z = 0;
 	float x1, x2, y1, y2, AC, BC, AC_BC, A, B, C;
+	cin >> z;
 	switch (z)
 	{
 	case 1:
@@ -44,6 +45,7 @@ int main()
 	}
 	case 2:
 	{
+		cout << "Pleace enter the values of variables:" << endl;
 		cin >> A >> B >> C;
 		cout << task2(A, B, C) << endl;
 	}
