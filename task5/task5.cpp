@@ -59,10 +59,20 @@ string task4(float x1, float y1, float x2, float y2)
 	return strok4;
 }
 
+string task5(float x1, float y1, float x2, float y2, float x3, float y3)
+{
+	string strok5;
+	float s;
+	s = 0.5 * abs((x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1));
+	strok5 += "Area of a triangular = ";
+	strok5 += to_string(s);
+	return strok5;
+}
+
 int main()
 {
 	int z = 0;
-	float x1, x2, y1, y2, AC, BC, AC_BC, A, B, C, AC_add_BC;
+	float x1, x2, y1, y2, AC, BC, AC_BC, A, B, C, AC_add_BC, x3, y3;
 	cin >> z;
 	switch (z)
 	{
@@ -88,6 +98,12 @@ int main()
 		cout << "Pleace enter the values of variables:" << endl;
 		cin >> x1 >> y1 >> x2 >> y2;
 		cout << task4(x1, y1, x2, y2) << endl;
+	}
+	case 5:
+	{
+		cout << "Pleace enter the values of variables:" << endl;
+		cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
+		cout << task5(x1, y1, x2, y2, x3, y3) << endl;
 	}
 	}
 
