@@ -44,6 +44,21 @@ string task3(float A, float B, float C)
 
 }
 
+string task4(float x1, float y1, float x2, float y2)
+{
+	string strok4;
+	float AB, AD, s, p;
+	AB = y2 - y1;
+	AD = x2 - x1;
+	s = AB * AD;
+	p = 2 * AB + 2 * AD;
+	strok4 += "Perimetr = ";
+	strok4 += to_string(p);
+	strok4 += "; Area of rectangle = ";
+	strok4 += to_string(s);
+	return strok4;
+}
+
 int main()
 {
 	int z = 0;
@@ -67,6 +82,12 @@ int main()
 		cout << "Pleace enter the values of variables:" << endl;
 		cin >> A >> B >> C;
 		cout << task3(A, B, C) << endl; 
+	}
+	case 4:
+	{
+		cout << "Pleace enter the values of variables:" << endl;
+		cin >> x1 >> y1 >> x2 >> y2;
+		cout << task4(x1, y1, x2, y2) << endl;
 	}
 	}
 
