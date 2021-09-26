@@ -62,10 +62,13 @@ string task4(float x1, float y1, float x2, float y2)
 string task5(float x1, float y1, float x2, float y2, float x3, float y3)
 {
 	string strok5;
-	float s;
+	float s,p;
 	s = 0.5 * abs((x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1));
+	p = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2)) + sqrt(pow(x3 - x2, 2) + pow(y3 - y2, 2)) + sqrt(pow(x1 - x3, 2) + pow(y1 - y3, 2));
 	strok5 += "Area of a triangular = ";
 	strok5 += to_string(s);
+	strok5 += "; Perimetr of triangular = ";
+	strok5 += to_string(p);
 	return strok5;
 }
 
