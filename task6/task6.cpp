@@ -24,7 +24,7 @@ string task1(float a, float b)
 int main()
 {
 	int z;
-	cout << "Pleace? enter task number(1-5): " << endl;
+	cout << "Pleace, enter task number(1-5): " << endl;
 	cin >> z;
 	float a, b;
 	switch (z)
