@@ -1,20 +1,44 @@
-// task6.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include <string>
+#include <locale>
+
+using namespace std;
+
+string task1(float a, float b)
+{
+	setlocale(LC_ALL, "Russian");
+	string strok1;
+	float buf;
+	buf = b;
+	b = a;
+	a = buf;
+	strok1 += "Values of A: ";
+	strok1 += to_string(a);
+	strok1 += "; Values of B: ";
+	strok1 += to_string(b);
+	strok1 += "//Задача реализована с использованием 3й переменной, но могла быть также реализована посредством функции swap";
+	return strok1;
+}
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	int z;
+	cout << "Pleace? enter task number(1-5): " << endl;
+	cin >> z;
+	float a, b;
+	switch (z)
+	{
+	case 1:
+	{
+		cout << "Enter value of variables..." << endl;
+		cout << "A = ";
+		cin >> a;
+		cout << "B = ";
+		cin >> b;
+		cout << task1(a, b) << endl;
+	}
+	}
+
+	return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
