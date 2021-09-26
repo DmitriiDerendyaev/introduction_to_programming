@@ -76,6 +76,7 @@ int main()
 {
 	int z = 0;
 	float x1, x2, y1, y2, AC, BC, AC_BC, A, B, C, AC_add_BC, x3, y3;
+	cout << "Enter a task number: ";
 	cin >> z;
 	switch (z)
 	{
