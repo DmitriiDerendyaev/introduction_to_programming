@@ -105,7 +105,18 @@ int main()
 	case 5:
 	{
 		cout << "Pleace enter the values of variables: " << endl;
-		cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
+		cout << "X1 = ";
+		cin >> x1;
+		cout << "Y1 = ";
+		cin >> y1;
+		cout << "X2 = ";
+		cin >> x2;
+		cout << "Y2 = ";
+		cin >> y2;
+		cout << "X3 = ";
+		cin >> x3;
+		cout << "Y3 = ";
+		cin >> y3;
 		cout << task5(x1, y1, x2, y2, x3, y3) << endl;
 	}
 	}
