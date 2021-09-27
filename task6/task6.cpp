@@ -85,6 +85,19 @@ string task5_6(float x)
 	return strok5;
 }
 
+string task6_6(float a)
+{
+	string strok6;
+	float answer, a, b, c;
+	b = a * a;
+	c = b * b;
+	answer = c * c;
+	strok6 += "Value of A: ";
+	strok6 += to_string(answer);
+
+	return strok6;
+}
+
 int main()
 {
 	cout << setprecision(3);
@@ -139,6 +152,13 @@ int main()
 		cout << "X = ";
 		cin >> x;
 		cout << task5_6(x) << endl;
+	}
+	case 6:
+	{
+		cout << "Enter value of variables..." << endl;
+		cout << "A = ";
+		cin >> x;
+		cout << task6_6(x) << endl;
 	}
 	}
 	
