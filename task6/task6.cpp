@@ -3,6 +3,7 @@
 #include <locale>
 #include <algorithm>
 #include <iomanip>
+#include <math.h>
 
 using namespace std;
 
@@ -42,15 +43,56 @@ string task2_6(float a, float b, float c)
 	return strok2;
 }
 
+string task3_6(float a, float b, float c)
+{
+	string strok3;
+	float a1, b1, c1;
+	a1 = a;
+	b1 = b;
+	c1 = c;
+	swap(a1, c);
+	swap(c1, b);
+	swap(b1, a);
+	strok3 += "Value of A: ";
+	strok3 += to_string(a);
+	strok3 += "; Value of B: ";
+	strok3 += to_string(b);
+	strok3 += "; Value of C: ";
+	strok3 += to_string(c);
+
+	return strok3;
+}
+
+string task4_6(float x)
+{
+	string strok4;
+	float y;
+	y = 3 * pow(x, 6) - 6 * pow(x, 2) - 7;
+	strok4 += "Value of y: ";
+	strok4 += to_string(y);
+
+	return strok4;
+}
+
+string task5_6(float x)
+{
+	string strok5;
+	float y;
+	y = 4 * pow((x - 3), 6) - 7 * pow((x - 3), 3) + 2;
+	strok5 += "Value of y: ";
+	strok5 += to_string(y);
+
+	return strok5;
+}
 
 int main()
 {
 	cout << setprecision(3);
 
 	int z;
-	cout << "Pleace, enter task number(1-5): " << endl;
+	cout << "Pleace, enter task number(1-7): " << endl;
 	cin >> z;
-	float a, b,c;
+	float a, b, c, x, y;
 	switch (z)
 	{
 	case 1:
@@ -73,7 +115,32 @@ int main()
 		cin >> c;
 		cout << task2_6(a, b, c) << endl;
 	}
+	case 3:
+	{
+		cout << "Enter value of variables..." << endl;
+		cout << "A = ";
+		cin >> a;
+		cout << "B = ";
+		cin >> b;
+		cout << "C = ";
+		cin >> c;
+		cout << task3_6(a, b, c) << endl;
 	}
-
+	case 4:
+	{
+		cout << "Enter value of variables..." << endl;
+		cout << "X = ";
+		cin >> x;
+		cout << task4_6(x) << endl;
+	}
+	case 5:
+	{
+		cout << "Enter value of variables..." << endl;
+		cout << "X = ";
+		cin >> x;
+		cout << task5_6(x) << endl;
+	}
+	}
+	
 	return 0;
 }
