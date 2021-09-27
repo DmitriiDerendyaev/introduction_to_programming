@@ -88,14 +88,29 @@ string task5_6(float x)
 string task6_6(float a)
 {
 	string strok6;
-	float answer, a, b, c;
+	float b;
 	b = a * a;
-	c = b * b;
-	answer = c * c;
+	a = b * b;
+	b = a * a;
 	strok6 += "Value of A: ";
-	strok6 += to_string(answer);
+	strok6 += to_string(b);
 
 	return strok6;
+}
+
+string task7_6(float a)
+{
+	string strok7;
+	float b, c;
+	b = a * a;
+	c = a * b;
+	c = c * b;
+	b = c * c;
+	c = b * c;
+	strok7 += "Value of A: ";
+	strok7 += to_string(c);
+
+	return strok7;
 }
 
 int main()
@@ -159,6 +174,13 @@ int main()
 		cout << "A = ";
 		cin >> x;
 		cout << task6_6(x) << endl;
+	}
+	case 7:
+	{
+		cout << "Enter value of variables..." << endl;
+		cout << "A = ";
+		cin >> x;
+		cout << task7_6(x) << endl;
 	}
 	}
 	
