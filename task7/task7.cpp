@@ -3,7 +3,7 @@
 
 using namespace std;
 const float pi = 3.1415926535;
-float deg, rad, a, amount_x, amount_y, price, total_x, total_y;
+float deg, rad, a, amount_x, amount_y, price, total_x, total_y, v1, v2, s, t;
 
 string task1_7(float a)
 {
@@ -44,6 +44,19 @@ string task3_7(float amount_x, float total_x/*, float amount_y*/)
 	return strok3;
 }
 
+string task4_7(float v1, float v2, float s, float t)
+{
+	string strok4;
+	s = s + (v1 * t) + (v2 * t);
+	strok4 += "In ";
+	strok4 += to_string(t);
+	strok4 += " hours the distance will be ";
+	strok4 += to_string(s);
+	strok4 += " km.";
+
+	return strok4;
+}
+
 int main()
 {
 	int z;
@@ -74,13 +87,20 @@ int main()
 		cin >> total_x;
 		cout << task3_7(amount_x, total_x);
 	}
-	/*
-	case 1:
+	
+	case 4:
 	{
-		cout << "Enter value of angle:";
-		cin >> a;
-		cout << task1_7(a);
+		cout << "Enter the speed value of first car:";
+		cin >> v1;
+		cout << "Enter th speed value of second car:";
+		cin >> v2;
+		cout << "Enter the distance:";
+		cin >> s;
+		cout << "Enter value of the all time:";
+		cin >> t;
+		cout << task4_7(v1, v2, s, t);
 	}
+	/*
 	case 1:
 	{
 		cout << "Enter value of angle:";
