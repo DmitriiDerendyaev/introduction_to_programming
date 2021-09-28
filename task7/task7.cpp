@@ -3,7 +3,7 @@
 
 using namespace std;
 const float pi = 3.1415926535;
-float deg, rad, a, amount_x, amount_y, price, total_x, total_y, v1, v2, s, t;
+float deg, rad, a, b, x, amount_x, amount_y, price, total_x, total_y, v1, v2, s, t;
 
 string task1_7(float a)
 {
@@ -57,6 +57,16 @@ string task4_7(float v1, float v2, float s, float t)
 	return strok4;
 }
 
+string task5_7(float a, float b)
+{
+	string strok5;
+	x = -b / a;
+	strok5 += "X equals:";
+	strok5 += to_string(x);
+
+	return strok5;
+}
+
 int main()
 {
 	int z;
@@ -100,14 +110,17 @@ int main()
 		cin >> t;
 		cout << task4_7(v1, v2, s, t);
 	}
-	/*
-	case 1:
+	case 5:
 	{
-		cout << "Enter value of angle:";
+		cout << "Enter value of coefficient A:";
 		cin >> a;
-		cout << task1_7(a);
+		cout << "Enter value of coefficient B:";
+		cin >> b;
+		cout << task5_7(a, b);
 	}
-	case 1:
+
+	/*/
+	case 6:
 	{
 		cout << "Enter value of angle:";
 		cin >> a;
