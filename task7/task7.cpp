@@ -3,7 +3,7 @@
 
 using namespace std;
 const float pi = 3.1415926535;
-float deg, rad, a;
+float deg, rad, a, amount_x, amount_y, price, total_x, total_y;
 
 string task1_7(float a)
 {
@@ -27,6 +27,23 @@ string task2_7(float rad)
 	return strok2;
 }
 
+string task3_7(float amount_x, float total_x/*, float amount_y*/)
+{
+	string strok3;
+	price = total_x / amount_x;
+	cout << "Enter value of amount_y: ";
+	cin >> amount_y;
+	total_y = price * amount_y;
+	strok3 += "1kg costs:";
+	strok3 += to_string(price);
+	strok3 += "; ";
+	strok3 += to_string(amount_y);
+	strok3 += "kg costs:";
+	strok3 += to_string(total_y);
+
+	return strok3;
+}
+
 int main()
 {
 	int z;
@@ -48,13 +65,16 @@ int main()
 		cin >> rad;
 		cout << task2_7(rad);
 	}
-	/*
-	case 1:
+	
+	case 3:
 	{
-		cout << "Enter value of angle:";
-		cin >> a;
-		cout << task1_7(a);
+		cout << "Enter value of amount_X:";
+		cin >> amount_x;
+		cout << "Enter value of total_X:";
+		cin >> total_x;
+		cout << task3_7(amount_x, total_x);
 	}
+	/*
 	case 1:
 	{
 		cout << "Enter value of angle:";
