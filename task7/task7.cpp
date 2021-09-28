@@ -3,7 +3,8 @@
 
 using namespace std;
 const float pi = 3.1415926535;
-float deg, rad, a, b, x, amount_x, amount_y, price, total_x, total_y, v1, v2, s, t;
+float deg, rad, a, b, x,y, amount_x, amount_y, price, total_x, total_y, v1, v2, s, t;
+float a11, a12, a21, a22, c1, c2, detA, detX, detY;
 
 string task1_7(float a)
 {
@@ -67,8 +68,29 @@ string task5_7(float a, float b)
 	return strok5;
 }
 
+string task6_7(float a11, float a12, float a21, float f22, float c1, float c2)
+{
+	string strok6;
+	detA = a11 * a22 - a12 * a21;
+	if (detA == 0)
+	return "Error";
+	detX = a12 * c2 - c1 * a22;
+	detY = a11 * c2 - a12 * c1;
+	x = detX / detA;
+	y = detY / detA;
+	strok6 += "X equals:";
+	strok6 += to_string(x);
+	strok6 += "; Y equals:";
+	strok6 += to_string(y);
+
+	return strok6;
+}
+
 int main()
 {
+
+	setlocale(LC_ALL, "Russian");
+
 	int z;
 
 	cout << "Enter the task number: " << endl;
@@ -118,15 +140,23 @@ int main()
 		cin >> b;
 		cout << task5_7(a, b);
 	}
-
-	/*/
 	case 6:
 	{
-		cout << "Enter value of angle:";
-		cin >> a;
-		cout << task1_7(a);
+		cout << "Enter the value of A1:";
+		cin >> a11;
+		cout << "Enter the value of B1:";
+		cin >> a12;
+		cout << "Enter the value of C1:";
+		cin >> c1;
+		cout << "Enter the value of A2:";
+		cin >> a21;
+		cout << "Enter the value of B2:";
+		cin >> a22;
+		cout << "Enter the value of C2:";
+		cin >> c2;
+		cout << task6_7(a11, a12, a21, a22, c1, c2) << endl;
+		cout << "Система решена с помощью матрицы";
 	}
-	*/
 	}
 
 	return 0;
