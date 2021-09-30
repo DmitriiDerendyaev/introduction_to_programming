@@ -113,7 +113,7 @@ int main()
 	
 	case 3:
 	{
-		cout << "Enter value of amount_X:";
+		cout << "Enter value of amount_XXX:";
 		cin >> amount_x;
 		cout << "Enter value of total_X:";
 		cin >> total_x;
