@@ -51,6 +51,18 @@ string task4(int num)
 	return strok4;
 }
 
+string task5(int num)
+{
+	string strok5;
+	des = num / 100;
+	edin = num % 100;
+	answer = edin * 10 + des;
+	strok5 += "ReNumder:";
+	strok5 += to_string(answer);
+
+	return strok5;
+}
+
 
 int main()
 {
@@ -87,6 +99,12 @@ int main()
 		cout << "Enter value of number:";
 		cin >> num;
 		cout << task4(num);
+	}
+	case 5:
+	{
+		cout << "Enter value of number:";
+		cin >> num;
+		cout << task5(num);
 	}
 	}
 
