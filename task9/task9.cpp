@@ -1,9 +1,10 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 
 using namespace std;
 
-int sec, day, n;
+int a, b, c, sec, day, n, area_AB, area_C, amount;
 
 string task1(int n)
 {
@@ -107,6 +108,31 @@ string task3(int day, int n)
 	return strok3;
 }
 
+string task4(int a, int b, int c)
+{
+	string strok4;
+	area_AB = a * b;
+	area_C = pow(c, 2);
+	if (area_C > a or area_C > b)
+	{
+		strok4 += "Error";
+		return strok4;
+	}
+	else
+	{
+		amount = area_AB / area_C;
+		area_AB = area_AB % area_C;
+	}
+	
+	//area_AB = area_AB - area_C;
+	strok4 += "The rectangle fits ";
+	strok4 += to_string(amount);
+	strok4 += " squares; Cells left: ";
+	strok4 += to_string(area_AB);
+
+	return strok4;
+}
+
 int main()
 {
     int z;
@@ -130,6 +156,12 @@ int main()
 	{
 		cin >> day >> n;
 		cout << task3(day, n);
+		break;
+	}
+	case 4:
+	{
+		cin >> a >> b >> c;
+		cout << task4(a, b, c);
 		break;
 	}
 	default:
