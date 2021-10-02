@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int sec, day;
+int sec, day, n;
 
 string task1(int n)
 {
@@ -61,6 +61,52 @@ string task2(int day)
 	return strok2;
 }
 
+string task3(int day, int n)
+{
+	string strok3;
+	day = (day + n - 1)  % 7;
+	switch (day)
+	{
+	case 7:
+	{
+		strok3 += "Current weekday: Sunday";
+		break;
+	}
+	case 1:
+	{
+		strok3 += "Current weekday: Monday";
+		break;
+	}
+	case 2:
+	{
+		strok3 += "Current weekday: Tuesday";
+		break;
+	}
+	case 3:
+	{
+		strok3 += "Current weekday: Wednesday";
+		break;
+	}
+	case 4:
+	{
+		strok3 += "Current weekday: Thursday";
+		break;
+	}
+	case 5:
+	{
+		strok3 += "Current weekday: Friday";
+		break;
+	}
+	case 6:
+	{
+		strok3 += "Current weekday: Saturday";
+		break;
+	}
+	}
+
+	return strok3;
+}
+
 int main()
 {
     int z;
@@ -78,6 +124,12 @@ int main()
 	{
 		cin >> day;
 		cout << task2(day);
+		break;
+	}
+	case 3:
+	{
+		cin >> day >> n;
+		cout << task3(day, n);
 		break;
 	}
 	default:
