@@ -123,8 +123,6 @@ string task4(int a, int b, int c)
 		amount = area_AB / area_C;
 		area_AB = area_AB % area_C;
 	}
-	
-	//area_AB = area_AB - area_C;
 	strok4 += "The rectangle fits ";
 	strok4 += to_string(amount);
 	strok4 += " squares; Cells left: ";
