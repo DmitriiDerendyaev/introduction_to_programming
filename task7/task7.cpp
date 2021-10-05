@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 
 using namespace std;
@@ -91,8 +91,10 @@ int main()
 
 	setlocale(LC_ALL, "Russian");
 
-	int z;
 
+	int z, count = 0;
+	while (count < 7)
+	{
 	cout << "Enter the task number: " << endl;
 	cin >> z;
 
@@ -103,14 +105,18 @@ int main()
 		cout << "Enter value of angle:";
 		cin >> a;
 		cout << task1_7(a);
+		count++;
+		break;
 	}
 	case 2:
 	{
 		cout << "Enter value of rad:";
 		cin >> rad;
 		cout << task2_7(rad);
+		count++;
+		break;
 	}
-	
+
 	case 3:
 	{
 		cout << "Enter value of amount_XXX:";
@@ -118,8 +124,10 @@ int main()
 		cout << "Enter value of total_X:";
 		cin >> total_x;
 		cout << task3_7(amount_x, total_x);
+		count++;
+		break;
 	}
-	
+
 	case 4:
 	{
 		cout << "Enter the speed value of first car:";
@@ -131,6 +139,8 @@ int main()
 		cout << "Enter value of the all time:";
 		cin >> t;
 		cout << task4_7(v1, v2, s, t);
+		count++;
+		break;
 	}
 	case 5:
 	{
@@ -138,7 +148,9 @@ int main()
 		cin >> a;
 		cout << "Enter value of coefficient B:";
 		cin >> b;
-		cout << task5_7(a, b);
+		cout << task5_7(a, b) << endl;
+		count++;
+		break;
 	}
 	case 6:
 	{
@@ -155,7 +167,17 @@ int main()
 		cout << "Enter the value of C2:";
 		cin >> c2;
 		cout << task6_7(a11, a12, a21, a22, c1, c2) << endl;
-		cout << "Ñèñòåìà ðåøåíà ñ ïîìîùüþ ìàòðèöû";
+		cout << "Ð¡Ð¸ÑÑ‚ÐµÐ¼Ð° Ñ€ÐµÑˆÐµÐ½Ð° Ñ Ð¿Ð¾Ð¼Ð¾Ñ‰ÑŒÑŽ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹" << endl;
+		count++;
+		break;
+	}
+	case 10:
+		cout << "if you want to break the programm enter 0" << endl;
+		int p;
+		cin >> p;
+		if (p == 0) return 0;
+		break;
+
 	}
 	}
 	return 0;
