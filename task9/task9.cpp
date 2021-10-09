@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int a, b, c, sec, day, n, area_AB, area_C, amount;
+int a, b, c, sec, day, n, area_AB, area_C, amount, year, century;
 
 string task1(int n)
 {
@@ -113,6 +113,11 @@ string task4(int a, int b, int c)
 	string strok4;
 	area_AB = a * b;
 	area_C = pow(c, 2);
+	if (area_C == 0)
+	{
+		cout << "Error" << endl;
+		return 0;
+	}
 	if (area_C > a or area_C > b)
 	{
 		strok4 += "Error";
@@ -131,38 +136,74 @@ string task4(int a, int b, int c)
 	return strok4;
 }
 
+string task5(int year)
+{
+	string strok5;
+	century = year / 100 + 1;
+	strok5 += "Century is: ";
+	strok5 += to_string(century);
+	strok5 += " ";
+	return strok5;
+}
+
 int main()
 {
-    int z;
+    int z, count = 0;
+	cout << "Enter the task number:" << endl;
     cin >> z;
-
-	switch (z)
+	while(count <= 5)
 	{
-	case 1:
-	{
-		cin >> sec;
-		cout << task1(sec);
-		break;
+		switch (z)
+		{
+		case 1:
+		{
+			cin >> sec;
+			cout << task1(sec) << endl;
+			cout << "If you want to stop the programm, enter 0." << endl;
+			count++;
+			break;
+		}
+		case 2:
+		{
+			cin >> day;
+			cout << task2(day) << endl;
+			cout << "If you want to stop the programm, enter 0." << endl;
+			count++;
+			break;
+		}
+		case 3:
+		{
+			cin >> day >> n;
+			cout << task3(day, n) << endl;
+			cout << "If you want to stop the programm, enter 0." << endl;
+			count++;
+			break;
+		}
+		case 4:
+		{
+			cin >> a >> b >> c;
+			cout << task4(a, b, c) << endl;
+			cout << "If you want to stop the programm, enter 0." << endl;
+			count++;
+			break;
+		}
+		case 5:
+		{
+			cin >> year;
+			cout << task5(year);
+			cout << "If you want to stop the programm, enter 0." << endl;
+			count++;
+			break;
+		}
+		case 0:
+		{
+			cout << "Closing the program." << endl;
+			return 0;
+			break;
+		}
+		default:
+			break;
+		}
 	}
-	case 2:
-	{
-		cin >> day;
-		cout << task2(day);
-		break;
-	}
-	case 3:
-	{
-		cin >> day >> n;
-		cout << task3(day, n);
-		break;
-	}
-	case 4:
-	{
-		cin >> a >> b >> c;
-		cout << task4(a, b, c);
-		break;
-	}
-	default:
-		break;
-	}
+	return 0;
 }
