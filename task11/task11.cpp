@@ -98,20 +98,28 @@ string task5(int a)
 	return strok5;
 }
 
-string task5(int a)
+string task6(int a)
 {
-	string strok5;
-	if (a > 0)
-		strok5 += "Positive, ";
-	else
-		strok5 += "Negative, ";
-	if (a % 2 == 0)
-		strok5 += "even, ";
-	else
-		strok5 += "odd, ";
-	strok5 += "number";
+	string strok6, buf;
+	buf += to_string(a);
 
-	return strok5;
+	if (a % 2 == 0)
+		strok6 += "Even, ";
+	else
+		strok6 += "Odd, ";
+
+	if (buf.size() == 3)
+		strok6 += "three-digit, ";
+	else if (buf.size() == 2)
+		strok6 += "two-digit, ";
+	else if (buf.size() == 1)
+		strok6 += "unequivocal ";
+	else
+		strok6 += "ERROR";
+
+	strok6 += "number";
+
+	return strok6;
 }
 
 int main()
@@ -178,7 +186,14 @@ int main()
 			cout << task5(a) << endl;
 			count++;
 			break;
-
+		}
+		case 6:
+		{
+			cout << "Enter the value of number:";
+			cin >> a;
+			cout << task6(a) << endl;
+			count++;
+			break;
 		}
 		case 0:
 		{
