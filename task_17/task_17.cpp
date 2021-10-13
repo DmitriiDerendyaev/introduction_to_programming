@@ -3,42 +3,65 @@
 
 using namespace std;
 
-vector <int> vec1;
-int sum, k, l, n;
-
-void writing(int vec)
+//vector <int> vec1;
+int k, l, n;
+float sum;
+void writing(vector<int>& vec1)
 {
+
 	for (int i = 0; i < vec1.size(); i++)
 		cout << vec1[i] << " ";
 }
 
-void reading(vector <int> vec1)
+void reading(vector<int> &vec1, int vec_size)
 {
-	for (int i = 0; i < vec1.size(); i++)
-		cin >> vec1[i];
+	int el;
+	for (int i = 0; i < vec_size; i++)
+	{
+		cin >> el;
+		vec1.push_back(el);
+	}
 }
 
 
 void task1(void)
 {
+	int count = 0;
 	cout << "N: ";
 	cin >> n;
+	vector <int> vec1;//k < l < n
 	cout << endl << "K: ";
 	cin >> k;
 	cout << endl << "L: ";
 	cin >> l;
 	vec1.reserve(n);
-	vector<int>* p_vector = &vec1;
-	reading(p_vector);
-	for(int i = k; i < l; i++)
+	reading(vec1, n);
+	for (int i = k - 1; i < l; i++)//первый элемент, с него и начинаем
+	{
 		sum += vec1[i];
-	sum = sum / (l - k);
+		count++;
+	}
+	sum = sum / count;
 	cout << sum;
 }
 
 int main()
 {
-	task1();
+	int z, count_while = 0;
+	cin >> z;
+
+	while(count_while < 5)
+	switch (z)
+	{
+	case 1:
+	{
+		task1();
+		count_while++;
+		break;
+	}
+	default:
+		break;
+	}
 
 	return 0;
 }
