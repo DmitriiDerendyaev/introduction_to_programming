@@ -69,8 +69,49 @@ string task3(int a, int b, int c)
 string task4(int x, int y)
 {
 	string strok4;
-	if()
-	return strok3;
+	if (x > 0 and y > 0)
+		strok4 += "In the first quarter.";
+	else if (x < 0 and y > 0)
+		strok4 += "In the seconf quarter.";
+	else if (x < 0 and y < 0)
+		strok4 += "In the third quarter.";
+	else if (x > 0 and y < 0)
+		strok4 += "In the fourth quarter.";
+	else
+		strok4 += "The point is on the coordinate axis.";
+	return strok4;
+}
+
+string task5(int a)
+{
+	string strok5;
+	if (a > 0)
+		strok5 += "Positive, ";
+	else
+		strok5 += "Negative, ";
+	if (a % 2 == 0)
+		strok5 += "even, ";
+	else
+		strok5 += "odd, ";
+	strok5 += "number";
+
+	return strok5;
+}
+
+string task5(int a)
+{
+	string strok5;
+	if (a > 0)
+		strok5 += "Positive, ";
+	else
+		strok5 += "Negative, ";
+	if (a % 2 == 0)
+		strok5 += "even, ";
+	else
+		strok5 += "odd, ";
+	strok5 += "number";
+
+	return strok5;
 }
 
 int main()
@@ -118,6 +159,26 @@ int main()
 			cout << task3(a, b, c) << endl;
 			count++;
 			break;
+		}
+		case 4:
+		{
+			cout << "Enter the value of X:";
+			cin >> a;
+			cout << endl << "Enter the value of Y:";
+			cin >> b;
+			cout << task4(a, b) << endl;
+			count++;
+			break;
+
+		}
+		case 5:
+		{
+			cout << "Enter the value of number:";
+			cin >> a;
+			cout << task5(a) << endl;
+			count++;
+			break;
+
 		}
 		case 0:
 		{
