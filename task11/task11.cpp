@@ -66,25 +66,10 @@ string task3(int a, int b, int c)
 	return strok3;
 }
 
-string task4(int a, int b)
+string task4(int x, int y)
 {
 	string strok4;
-	lenght_ab = abs(b - a);
-	lenght_ac = abs(c - a);
-	if (lenght_ab < lenght_ac)
-	{
-		strok3 += "Point B more nearest then C. Lenght AB is:";
-		strok3 += to_string(lenght_ab);
-	}
-	else if (lenght_ab > lenght_ac)
-	{
-		strok3 += "Point C more nearest then B. Lenght AC is:";
-		strok3 += to_string(lenght_ac);
-	}
-	else
-	{
-		strok3 += "Error, when A = B = C or other errors in input data.";
-	}
+	if()
 	return strok3;
 }
 
