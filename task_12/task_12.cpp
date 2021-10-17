@@ -1,9 +1,11 @@
 #include <iostream>
 #include <string>
+#include <clocale>
 
 using namespace std;
 
-int day, month;
+int day, month, direction, n;
+char c;
 
 string task1(int day, int month)
 {
@@ -63,33 +65,48 @@ string task1(int day, int month)
 		strok1 += "Seventeenth";
 		break;
 	case 18:
+		break;
 		strok1 += "Eighteenth";
+		break;
 	case 19:
 		strok1 += "Nineteenth";
+		break;
 	case 20:
 		strok1 += "Twenteenth";
+		break;
 	case 21:
 		strok1 += "Twenty first";
+		break;
 	case 22:
 		strok1 += "Twenty second";
+		break;
 	case 23:
 		strok1 += "Twenty third";
+		break;
 	case 24:
 		strok1 += "Twenty fourth";
+		break;
 	case 25:
 		strok1 += "Twenty fifth";
+		break;
 	case 26:
 		strok1 += "Twenty sixth";
+		break;
 	case 27:
 		strok1 += "Twenty seventh";
+		break;
 	case 28:
 		strok1 += "Twenty eight";
+		break;
 	case 29:
 		strok1 += "Twenty nineth";
+		break;
 	case 30:
 		strok1 += "Thirtieth";
+		break;
 	case 31:
 		strok1 += "Thirty first";
+		break;
 	default:
 		break;
 	}
@@ -140,38 +157,70 @@ string task1(int day, int month)
 	return strok1;
 }
 
+string task2(char c, int n)
+{
+	setlocale(LC_ALL, "");
+	string strok2, dir[4] = { "Север", "Восток", "Юг", "Запад"};
+	if ((int)c == 67 or (int)c == 99 or (int)c == 145 or (int)c == 225)
+	{
+		direction = 0;
+	}
+	direction = 0 + n;
+	strok2 += dir[direction];
+	return strok2;
+}
+
 int main()
 {
-	int z;
+	setlocale(LC_ALL, "");
+	int z, count = 0;
 	cin >> z;
-	switch (z)
+	while (count <= 6)
 	{
-	case 1:
-	{
-		cout << "Enter the day number: ";
-		cin >> day;
-		cout << "Enter the month number: ";
-		cin >> month;
-		cout << task1(day, month);
-	}
-	case 2:
-	{
+		switch (z)
+		{
+		case 1:
+		{
+			cout << "Enter the day number: ";
+			cin >> day;
+			cout << "Enter the month number: ";
+			cin >> month;
+			cout << task1(day, month) << endl;
+			count++;
+			break;
+		}
+		case 2:
+		{
+			cout << "Enter the direction: ";
+			cin >> c;
+			cout << "Enter the count of operation: ";
+			cin >> n;
+			cout << task2(c, n) << endl;
+			count++;
+			break;
+		}
+		case 3:
+		{
 
-	}
-	case 3:
-	{
+		}
+		case 4:
+		{
 
-	}
-	case 4:
-	{
+		}
+		case 5:
+		{
 
-	}
-	case 5:
-	{
-
-	}
-	default:
-		break;
+		}
+		case 0:
+		{
+			cout << "Stop.";
+			return 0;
+			break;
+		}
+		default:
+			break;
+		}
+		cin >> z;
 	}
 
 	return 0;
