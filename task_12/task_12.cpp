@@ -188,6 +188,86 @@ string task2(char c, int n)//âîñïğèÿòèå êèğèëëèöû îñòàâëÿåò æåëàòü ëó÷øåãî
 	return strok2;
 }
 
+string task3()
+{
+	string strok3;
+	if ((n >= 10 and n <= 20) or n == 30 or n == 40)
+	{
+		switch (n)
+		{
+		case 10:
+			{
+				strok3 += "Äåñÿòü";
+				break;
+			}
+		case 11:
+			{
+				strok3 += "Îäèííàäöàòü";
+				break;
+			}
+		case 12:
+			{
+				strok3 += "Äâåííàäöàòü";
+				break;
+			}
+		case 13:
+			{
+				strok3 += "Òğèíàäöàòü";
+				break;
+			}
+		case 14:
+			{
+				strok3 += "×åòûğíàäöàòü";
+				break;
+			}
+		case 15:
+			{
+				strok3 += "Ïÿòíàäöàòü";
+				break;
+			}
+		case 16:
+			{
+				strok3 += "Øåñòíàäöàòü";
+				break;
+			}
+		case 17:
+			{
+				strok3 += "Ñåìíàäöàòü";
+				break;
+			}
+		case 18:
+			{
+				strok3 += "Âîñåìíàäöàòü";
+				break;
+			}
+		case 19:
+			{
+				strok3 += "Äåâÿòíàäöàòü";
+				break;
+			}
+		case 20:
+			{
+				strok3 += "Äâàäöàòü";
+				break;
+			}
+		case 30:
+			{
+				strok3 += "Äğèäöàòü";
+				break;
+			}
+		case 40:
+			{
+				strok3 += "Ñîğîê";
+				break;
+			}
+			default:
+				break;
+		}
+
+
+	}
+}
+
 int main()
 {
 	setlocale(LC_ALL, "");
