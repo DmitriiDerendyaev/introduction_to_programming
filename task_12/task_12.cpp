@@ -165,7 +165,20 @@ string task2(char c, int n)
 	{
 		direction = 0;
 	}
-	direction = 0 + n;
+	else if ((int)c == 69 or (int)c == 101 or (int)c == 130 or (int)c == 162)
+	{
+		direction = 1;
+	}
+	else if ((int)c == 83 or (int)c == 115 or (int)c == 158 or (int)c == 238)
+	{
+		direction = 2;
+	}
+	else if ((int)c == 87 or (int)c == 119 or (int)c == 135 or (int)c == 167)
+	{
+		direction = 3;
+	}
+
+	direction = (1 + n)%4;
 	strok2 += dir[direction];
 	return strok2;
 }
