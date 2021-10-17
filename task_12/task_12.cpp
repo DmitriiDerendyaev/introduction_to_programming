@@ -157,7 +157,7 @@ string task1(int day, int month)
 	return strok1;
 }
 
-string task2(char c, int n)
+string task2(char c, int n)//восприятие кириллицы оставляет желать лучшего
 {
 	setlocale(LC_ALL, "");
 	string strok2, dir[4] = { "Север", "Восток", "Юг", "Запад"};
@@ -177,8 +177,13 @@ string task2(char c, int n)
 	{
 		direction = 3;
 	}
+	else
+	{
+		strok2 += "Error.";
+		return strok2;
+	}
 
-	direction = (1 + n)%4;
+	direction = (direction + n)%4;
 	strok2 += dir[direction];
 	return strok2;
 }
