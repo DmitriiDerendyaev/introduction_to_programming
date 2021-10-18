@@ -188,10 +188,10 @@ string task2(char c, int n)//восприятие кириллицы оставляет желать лучшего
 	return strok2;
 }
 
-string task3()
+string task3(int n)
 {
 	string strok3;
-	if ((n >= 10 and n <= 20) or n == 30 or n == 40)
+	if ((n >= 10 and n <= 40) and n != 21 and n != 31)
 	{
 		switch (n)
 		{
@@ -260,12 +260,115 @@ string task3()
 				strok3 += "Сорок";
 				break;
 			}
+		case 22:
+		{
+			strok3 += "Двадцать два";
+			break;
+		}
+		case 23:
+		{
+			strok3 += "Двеннадцать три";
+			break;
+		}
+		case 24:
+		{
+			strok3 += "Двадцать четыре";
+			break;
+		}
+		case 25:
+		{
+			strok3 += "Двадцать пять";
+			break;
+		}
+		case 26:
+		{
+			strok3 += "Двадцать шесть";
+			break;
+		}
+		case 27:
+		{
+			strok3 += "Двадцать семь";
+			break;
+		}
+		case 28:
+		{
+			strok3 += "Двадцать восемь";
+			break;
+		}
+		case 29:
+		{
+			strok3 += "Двадцать девять";
+			break;
+		}
+		case 32:
+		{
+			strok3 += "Тридцать три";
+			break;
+		}
+		case 33:
+		{
+			strok3 += "Тридцать три";
+			break;
+		}
+		case 34:
+		{
+			strok3 += "Тидцать четыре";
+			break;
+		}
+		case 35:
+		{
+			strok3 += "Тридцать пять";
+			break;
+		}
+		case 36:
+		{
+			strok3 += "Тридцать шесть";
+			break;
+		}
+		case 37:
+		{
+			strok3 += "Тридцать семь";
+			break;
+		}
+		case 38:
+		{
+			strok3 += "Тридцать восемь";
+			break;
+		}
+		case 39:
+		{
+			strok3 += "Тридцать девять";
+			break;
+		}
 			default:
 				break;
 		}
 
-
+		strok3 += " учебных заданий.";
 	}
+	if (n == 21 or n == 31)
+	{
+		switch (n)
+		{
+		case 21:
+		{
+			strok3 += "Двадцать одно";
+			break;
+		}
+		case 31:
+		{
+			strok3 += "Тридцать одно";
+			break;
+		}
+		
+		default:
+			break;
+		}
+
+		strok3 += " учебное задание.";
+	}
+
+	return strok3;
 }
 
 int main()
@@ -299,7 +402,11 @@ int main()
 		}
 		case 3:
 		{
-
+			cout << "Введите количество заданий: ";
+			cin >> n;
+			cout << task3(n) << endl;
+			count++;
+			break;
 		}
 		case 4:
 		{
