@@ -161,7 +161,7 @@ string task2(char c, int n)//âîñïğèÿòèå êèğèëëèöû îñòàâëÿåò æåëàòü ëó÷øåãî
 {
 	setlocale(LC_ALL, "");
 	string strok2, dir[4] = { "Ñåâåğ", "Âîñòîê", "Şã", "Çàïàä"};
-	if ((int)c == 67 or (int)c == 99 or (int)c == 145 or (int)c == 225)
+	if ((int)c == 78 or (int)c == 110 or (int)c == 145 or (int)c == 225)
 	{
 		direction = 0;
 	}
@@ -260,6 +260,13 @@ string task3(int n)
 				strok3 += "Ñîğîê";
 				break;
 			}
+		strok3 += " ó÷åáíûõ çàäàíèé.";
+	}
+
+	if (n > 21 and n < 40 and n != 31)
+	{
+		switch (n)
+		{
 		case 22:
 		{
 			strok3 += "Äâàäöàòü äâà";
@@ -340,11 +347,12 @@ string task3(int n)
 			strok3 += "Òğèäöàòü äåâÿòüğìîìãïğâïâàîğğîîğï";
 			break;
 		}
-			default:
-				break;
+		default:
+			break;
 		}
+		
+		strok3 += " ó÷åáíûõ çàäàíèÿ.";
 
-		strok3 += " ó÷åáíûõ çàäàíèé.";
 	}
 	if (n == 21 or n == 31)
 	{
@@ -430,3 +438,4 @@ int main()
 
 	return 0;
 }
+	
