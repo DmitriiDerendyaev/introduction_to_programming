@@ -337,7 +337,7 @@ string task3(int n)
 		}
 		case 39:
 		{
-			strok3 += "Тридцать девять";
+			strok3 += "Тридцать девятьрмомгпрвпваорроорп";
 			break;
 		}
 			default:
