@@ -45,6 +45,21 @@ void task1(void)
 	cout << sum;
 }
 
+void task2(void)
+{
+	cout << "N: ";
+	cin >> n;
+	vector <int> vec2;
+	vec2.reserve(n);
+	reading(vec2, n);
+	d = vec2[1] - vec2[0];
+	for (int i = 2; i < n; i++)
+		dd = vec2[i] - vec2[i - 1];
+	if (dd != d)
+		cout << "Massive is't progressive";
+	else
+}
+
 int main()
 {
 	int z, count_while = 0;

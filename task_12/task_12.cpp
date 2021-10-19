@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int day, month, direction, n;
+int day, month, direction, n, h, d, u;
 char c;
 
 string task1(int day, int month)
@@ -388,6 +388,33 @@ string task3(int n)
 	return strok3;
 }
 
+string task4(int n)
+{
+	string strok4, hundreds[9] = {"Сто", "Двести", "Триста", "Четыреста", 
+		"Пятьсот", "Шестьсот", "Семьсот", "Восемьсот", "Девятьсот" }, 
+		dozens_0[9] = { "Десять", "Двадцать", "Тридцать", "Сорок", "Пятьдесят", "Шестьдесят", 
+		"Семьдесят", "Восемьдесят", "Девяносто" }, dozens_1[9] = { " десять", " двадцать", " тридцать", " сорок", " пятьдесят", " шестьдесят",
+		" семьдесят", " восемьдесят", " девяносто" }, units[9] = { " один", " два",
+		" три", " четыре", " пять", " шесть",
+		" семь", " восемь", " девять" };
+	
+	h = n / 100;
+	d = n % 100 / 10;
+	u = n % 10;
+	if (h == 0)
+	{
+		strok4 += dozens_0[d - 1];
+		strok4 += units[u - 1];
+	}
+	strok4 += hundreds[h-1];
+	if (d != 0)
+	strok4 += dozens[d-1];
+	if (u != 0)
+	strok4 += units[u-1];
+
+	return strok4;
+}
+
 int main()
 {
 	setlocale(LC_ALL, "");
@@ -427,7 +454,11 @@ int main()
 		}
 		case 4:
 		{
-
+			cout << "Введите число: ";
+			cin >> n;
+			cout << task4(n) << endl;
+			count++;
+			break;
 		}
 		case 5:
 		{
