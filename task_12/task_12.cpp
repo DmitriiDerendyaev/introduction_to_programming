@@ -191,97 +191,82 @@ string task2(char c, int n)//âîñïğèÿòèå êèğèëëèöû îñòàâëÿåò æåëàòü ëó÷øåãî
 string task3(int n)
 {
 	string strok3;
-	if ((n >= 10 and n <= 40) and n != 21 and n != 31)
+	if ((n >= 10 and n < 21) or (n == 20) or (n == 30) or (n == 40))
 	{
 		switch (n)
 		{
 		case 10:
-			{
-				strok3 += "Äåñÿòü";
-				break;
-			}
+		{
+			strok3 += "Äåñÿòü";
+			break;
+		}
 		case 11:
-			{
-				strok3 += "Îäèííàäöàòü";
-				break;
-			}
+		{
+			strok3 += "Îäèííàäöàòü";
+			break;
+		}
 		case 12:
-			{
-				strok3 += "Äâåííàäöàòü";
-				break;
-			}
+		{
+			strok3 += "Äâåííàäöàòü";
+			break;
+		}
 		case 13:
-			{
-				strok3 += "Òğèíàäöàòü";
-				break;
-			}
+		{
+			strok3 += "Òğèíàäöàòü";
+			break;
+		}
 		case 14:
-			{
-				strok3 += "×åòûğíàäöàòü";
-				break;
-			}
+		{
+			strok3 += "×åòûğíàäöàòü";
+			break;
+		}
 		case 15:
-			{
-				strok3 += "Ïÿòíàäöàòü";
-				break;
-			}
+		{
+			strok3 += "Ïÿòíàäöàòü";
+			break;
+		}
 		case 16:
-			{
-				strok3 += "Øåñòíàäöàòü";
-				break;
-			}
+		{
+			strok3 += "Øåñòíàäöàòü";
+			break;
+		}
 		case 17:
-			{
-				strok3 += "Ñåìíàäöàòü";
-				break;
-			}
+		{
+			strok3 += "Ñåìíàäöàòü";
+			break;
+		}
 		case 18:
-			{
-				strok3 += "Âîñåìíàäöàòü";
-				break;
-			}
+		{
+			strok3 += "Âîñåìíàäöàòü";
+			break;
+		}
 		case 19:
-			{
-				strok3 += "Äåâÿòíàäöàòü";
-				break;
-			}
+		{
+			strok3 += "Äåâÿòíàäöàòü";
+			break;
+		}
 		case 20:
-			{
-				strok3 += "Äâàäöàòü";
-				break;
-			}
+		{
+			strok3 += "Äâàäöàòü";
+			break;
+		}
 		case 30:
-			{
-				strok3 += "Äğèäöàòü";
-				break;
-			}
+		{
+			strok3 += "Äğèäöàòü";
+			break;
+		}
 		case 40:
-			{
-				strok3 += "Ñîğîê";
-				break;
-			}
+		{
+			strok3 += "Ñîğîê";
+			break;
+		}
+		}
 		strok3 += " ó÷åáíûõ çàäàíèé.";
 	}
-
-	if (n > 21 and n < 40 and n != 31)
+	if ((n >= 25 and n < 30) or (n >= 35 and n < 40))
 	{
 		switch (n)
 		{
-		case 22:
-		{
-			strok3 += "Äâàäöàòü äâà";
-			break;
-		}
-		case 23:
-		{
-			strok3 += "Äâåííàäöàòü òğè";
-			break;
-		}
-		case 24:
-		{
-			strok3 += "Äâàäöàòü ÷åòûğå";
-			break;
-		}
 		case 25:
 		{
 			strok3 += "Äâàäöàòü ïÿòü";
@@ -307,21 +292,6 @@ string task3(int n)
 			strok3 += "Äâàäöàòü äåâÿòü";
 			break;
 		}
-		case 32:
-		{
-			strok3 += "Òğèäöàòü òğè";
-			break;
-		}
-		case 33:
-		{
-			strok3 += "Òğèäöàòü òğè";
-			break;
-		}
-		case 34:
-		{
-			strok3 += "Òèäöàòü ÷åòûğå";
-			break;
-		}
 		case 35:
 		{
 			strok3 += "Òğèäöàòü ïÿòü";
@@ -344,15 +314,54 @@ string task3(int n)
 		}
 		case 39:
 		{
-			strok3 += "Òğèäöàòü äåâÿòüğìîìãïğâïâàîğğîîğï";
+			strok3 += "Òğèäöàòü äåâÿòü";
 			break;
 		}
 		default:
 			break;
 		}
 		
-		strok3 += " ó÷åáíûõ çàäàíèÿ.";
+		strok3 += " ó÷åáíûõ çàäàíèé.";
 
+	}
+	if ((n > 21 and n < 25) or (n > 31 and n < 35))
+	{
+		switch (n)
+		{
+		case 22:
+		{
+			strok3 += "Äâàäöàòü äâà";
+			break;
+		}
+		case 23:
+		{
+			strok3 += "Äâåííàäöàòü òğè";
+			break;
+		}
+		case 24:
+		{
+			strok3 += "Äâàäöàòü ÷åòûğå";
+			break;
+		}
+		case 32:
+		{
+			strok3 += "Òğèäöàòü òğè";
+			break;
+		}
+		case 33:
+		{
+			strok3 += "Òğèäöàòü òğè";
+			break;
+		}
+		case 34:
+		{
+			strok3 += "Òğèäöàòü ÷åòûğå";
+			break;
+		}
+		default:
+			break;
+		}
+		strok3 += " ó÷åáíûõ çàäàíèÿ.";
 	}
 	if (n == 21 or n == 31)
 	{
