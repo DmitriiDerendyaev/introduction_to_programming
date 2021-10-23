@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int day, month, direction, n, h, d, u;
+int day, month, direction, n, h, d, u, last_year, color_cur, animal_cur;
 char c;
 
 string task1(int day, int month)
@@ -425,6 +425,21 @@ else if (h == 0)
 	return strok4;
 }
 
+string task5(int n)
+{
+	string strok5, color[5] = {"зелен", "красн", "желт", "бел", "черн"},
+		animal[12] = {"ой крысы","ой коровы","ого тигра","ого зайца","ого дракона","ой змеи", "ой лошади",
+		"ой овцы","ой обезьяны", "ой курицы","ой собаки","ой свиньи" };
+	last_year = (n - 1984) % 60;
+	color_cur = last_year / 12;
+	animal_cur = last_year % 12;
+	strok5 += "Год ";
+	strok5 += color[color_cur];
+	strok5 += animal[animal_cur];
+	
+	return strok5;
+}
+
 int main()
 {
 	setlocale(LC_ALL, "");
@@ -473,7 +488,11 @@ int main()
 		}
 		case 5:
 		{
-
+			cout << "Введите год: ";
+			cin >> n;
+			cout << task5(n) << endl;
+			count++;
+			break;
 		}
 		case 0:
 		{
