@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int a, b, suma = 0;
+int a, b, suma = 0, n/*, к*/;
 
 void task1(void)
 {
@@ -41,11 +41,32 @@ void task2(void)
 
 void task3()
 {
-
+	cout << "Введите число N:";
+	cin >> n;
+	int k;
+	for (k = 1; k < n; k++)
+	{
+		suma += k;
+		if (suma >= n)
+			break;
+	}
+	cout << "K:" << k << " Sum:" << suma << endl;
+	
 }
 
 void task4()
 {
+	float s = 1000, p;
+	int count = 0;
+	cout << "Введите процентную ставку:";
+	cin >> p;
+
+	while (s <= 1100)
+	{
+		s *= 1 + (p * 0.01);
+		count++;
+	}
+	cout << "Количество месяцев:" << count << " Сумма:" << s << endl;
 
 }
 void task5()
