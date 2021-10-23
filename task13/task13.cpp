@@ -49,7 +49,7 @@ void task3(void)
 void task4(void)
 {
 	cout << "¬ведите число A:";
-	cin >> n;
+	cin >> a;
 	cout << "¬ведите число N:";
 	cin >> n;
 	float suma = 0;
@@ -59,6 +59,22 @@ void task4(void)
 		suma += pow(a, i);
 		cout << "—умма равна:" << suma << endl;
 	}
+}
+
+void task5(void)
+{
+	cout << "¬ведите число A:";
+	cin >> a;
+	cout << "¬ведите число N:";
+	cin >> n;
+	float suma = 0;
+	for (int i = 0; i <= n; i++)
+	{
+		cout.precision(3);
+		suma += pow(-a, i);
+		cout << "—умма равна:" << suma << endl;
+	}
+}
 
 
 int main()
@@ -97,7 +113,9 @@ int main()
 		}
 		case 5:
 		{
-
+			task5();
+			count++;
+			break;
 		}
 		case 0:
 		{
