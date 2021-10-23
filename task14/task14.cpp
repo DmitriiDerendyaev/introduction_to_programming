@@ -3,13 +3,13 @@
 
 using namespace std;
 
-int a, b;
+int a, b, suma = 0;
 
 void task1(void)
 {
 	cout << "Введите число А:";
 	cin >> a;
-	cout << "Введите число B:";
+	cout << "Введите число B:?";
 	cin >> b;
 	for (a; a <= b; a++)
 	{
@@ -21,6 +21,36 @@ void task1(void)
 			
 		cout << endl;
 	}
+}
+
+void task2(void)
+{
+	int count = 0;
+	suma = 0;
+	cout << "Введите число А:";
+	cin >> a;
+	cout << "Введите число B:";
+	cin >> b;
+	while (suma <= a)
+	{
+		suma += b;
+		count++;
+	}
+	cout << endl << count - 1 << endl;
+}
+
+void task3()
+{
+
+}
+
+void task4()
+{
+
+}
+void task5()
+{
+
 }
 
 int main()
@@ -42,19 +72,27 @@ int main()
 		}
 		case 2:
 		{
-
+			task2();
+			count++;
+			break;
 		}
 		case 3:
 		{
-
+			task3();
+			count++;
+			break;
 		}
 		case 4:
 		{
-
+			task4();
+			count++;
+			break;
 		}
 		case 5:
 		{
-
+			task5();
+			count++;
+			break;
 		}
 		case 0:
 		{
@@ -65,6 +103,7 @@ int main()
 		default:
 			break;
 		}
+		cin >> z;
 	}
 
 
