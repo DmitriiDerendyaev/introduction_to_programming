@@ -9,7 +9,7 @@ void task1(void)
 {
 	cout << "Введите число А:";
 	cin >> a;
-	cout << "Введите число B:?";
+	cout << "Введите число B:";
 	cin >> b;
 	for (a; a <= b; a++)
 	{
@@ -69,9 +69,41 @@ void task4()
 	cout << "Количество месяцев:" << count << " Сумма:" << s << endl;
 
 }
+
+int NOD(int a, int b) {
+	if (a < b) {
+		swap(a, b);
+	}
+	while (a % b != 0) 
+	{
+		a = a % b;
+		swap(a, b);
+	}
+	return b;
+}
+
 void task5()
 {
+	cout << "Введите число А:";
+	cin >> a;
+	cout << "Введите число B:";
+	cin >> b;
+	cout << "НОД: " << NOD(a, b) << endl;
+}
 
+void task6()
+{
+	cout << "Введите число N:";
+	cin >> n;
+	int f = 0, f1 = 0, f2 = 1, k = 0;
+	while (f < n)
+	{
+		f = f1 + f2;
+		f2 = f1;
+		f1 = f;
+		k++;
+	}
+	cout << "Номер К:" << k << endl;
 }
 
 int main()
@@ -80,6 +112,7 @@ int main()
 	int z, count_task, count = 0;
 	cout << "Введите количество операций:";
 	cin >> count_task;
+	cout << "Введите  номер задания:";
 	cin >> z;
 	while (count < count_task)
 	{
@@ -112,6 +145,12 @@ int main()
 		case 5:
 		{
 			task5();
+			count++;
+			break;
+		}
+		case 6:
+		{
+			task6();
 			count++;
 			break;
 		}
