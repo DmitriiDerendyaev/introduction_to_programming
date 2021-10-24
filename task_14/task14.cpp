@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int a, b, suma = 0, n/*, ê*/;
+int a, b, suma = 0, n;
 
 void task1(void)
 {
