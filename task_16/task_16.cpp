@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int n, a, b, d, suma;
+int n, a, b, d, suma, pos;
 
 
 void task1(void)
@@ -92,13 +92,15 @@ void task4()
 
 	for (int i = 0; i < vec4.size(); i++)
 	{
-		if (i % 2 == 0)
+		pos = i + 1;
+		if (pos % 2 != 0)
 		{
-			cout << vec4[i] << " ";
+			cout << vec4[] << " ";
 		}
-		else if (i % 2 != 0)
+		else if (pos % 2 == 0)
 		{
-			cout << vec4[vec4.size() - 1 - (i - 1)] << " ";
+			cout << vec4[vec4.size() - 1 - pos + 2] << " ";
+			//i--;
 		}
 
 	}
