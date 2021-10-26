@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <cmath>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -128,12 +129,43 @@ void task4()
 
 void task5()
 {
+	vector<int> vec5;
+	vector<int> vec_odd;//нечетный
+	vector<int> vec_even;//четный
 
-}
 
-void task6()
-{
+	cout << "Введите число N:";
+	cin >> n;
 
+	int el;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> el;
+		vec5.push_back(el);
+	}
+
+	for (int i = 0; i < vec5.size(); i++)
+	{
+		if (i % 2 == 0)
+		{
+			vec_even.push_back(vec5[i]);
+		}
+		else if (i % 2 != 0)
+		{
+			vec_odd.push_back(vec5[i]);
+		}
+	}
+	sort(vec_even.begin(), vec_even.end());
+	reverse(vec_odd.begin(), vec_odd.end());
+	cout << "Программа выводит НЕчетные значения в порядке возрастания:" << endl;
+	for (int i = 0; i < vec_even.size(); i++)
+		cout << vec_even[i] << " ";
+	
+	cout << endl;
+
+	cout << "Программа выводит Четные значения в порядке убывания:" << endl;
+	for (int i = 0; i < vec_odd.size(); i++)
+		cout << vec_odd[i] << " ";
 }
 
 int main()
@@ -175,12 +207,6 @@ int main()
 		case 5:
 		{
 			task5();
-			count++;
-			break;
-		}
-		case 6:
-		{
-			task6();
 			count++;
 			break;
 		}
