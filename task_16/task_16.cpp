@@ -95,7 +95,7 @@ void task4()
 		pos = i + 1;
 		if (pos % 2 != 0)
 		{
-			cout << vec4[] << " ";
+			cout << vec4[i] << " ";
 		}
 		else if (pos % 2 == 0)
 		{
