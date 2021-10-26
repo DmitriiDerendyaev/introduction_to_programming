@@ -89,13 +89,15 @@ void task4()
 		cin >> el;
 		vec4.push_back(el);
 	}
-
-	for (int i = 0; i < vec4.size(); i++)
+	//cout << vec4[0] << " ";
+	int i = 0;
+	while(i < vec4.size())
 	{
 		pos = i + 1;
 		if (pos % 2 != 0)
 		{
 			cout << vec4[i] << " ";
+			i++;
 		}
 		else if (pos % 2 == 0)
 		{
