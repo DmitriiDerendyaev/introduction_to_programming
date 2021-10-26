@@ -77,26 +77,34 @@ void task4()
 	cout << "Точка нахожится в четверти №" << Quarter(a, b) << endl;
 }
 
-float Fact2(float n)
+float Fact2(int n)
 {
 	if (n % 2 == 0)
 	{
-		while (i < n)
+		i = 2;
+		while (i <= n)
 		{
 			fac *= i;
 			i += 2;
 		}
 	}
+	else
+	{
+		i = 1;
+		while (i <= n)
+		{
+			fac *= i;
+			i += 2;
+		}
+	}
+	return fac;
 }
 
 void task5()
 {
-
-}
-
-void task6()
-{
-
+	cout << "Введите число N:";
+	cin >> n;
+	cout << "Факториал равен: " << Fact2(n) << endl;
 }
 
 int main()
@@ -138,12 +146,6 @@ int main()
 		case 5:
 		{
 			task5();
-			count++;
-			break;
-		}
-		case 6:
-		{
-			task6();
 			count++;
 			break;
 		}
