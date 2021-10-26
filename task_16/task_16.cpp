@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int n, a, b, d, suma, pos;
+int n, a, b, d, suma, pos, ras;
 
 
 void task1(void)
@@ -89,25 +89,42 @@ void task4()
 		cin >> el;
 		vec4.push_back(el);
 	}
-	//cout << vec4[0] << " ";
-	int i = 0;
-	while(i < vec4.size())
-	{
-		pos = i + 1;
-		if (pos % 2 != 0)
-		{
-			cout << vec4[i] << " ";
-			i++;
-		}
-		else if (pos % 2 == 0)
-		{
-			cout << vec4[vec4.size() - 1 - pos + 2] << " ";
-			//i--;
-		}
+	////cout << vec4[0] << " ";
+	//int i = 0, pos = 1;
+	//while(i < (vec4.size()/2) + 1)
+	//{
+	//	if (pos % 2 != 0)
+	//	{
+	//		cout << vec4[i] << " ";
+	//		i++;
+	//	}
+	//	else if (pos % 2 == 0)
+	//	{
+	//		cout << vec4[vec4.size() - 1 - pos + 2] << " ";
+	//		//pos++;
+	//		//i++;
+	//	}
+	//	pos++;
 
-	}
-
+	//}
+	/*for (int i = 0; i < n; i++)
+	{*/
+		pos = 0;
+		ras = n - 1;
+		while (pos <= ras)
+		{
+			cout << vec4[pos] << " ";
+			if (pos == ras)
+			{
+				break;
+			}
+			cout << vec4[ras] << " ";
+			pos++;
+			ras--;
+		}
+	/*}*/
 }
+
 
 void task5()
 {
