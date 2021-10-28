@@ -71,7 +71,7 @@ void task3(void)
 	vec3.reserve(n);
 	reading(vec3, n);
 	sort(vec3.begin(), vec3.end());
-	for (int i = 1; i < vec3.size(); i += 2)
+	for (int i = 1; i < vec3.size(); i += 2)//magic string 74
 	{
 		vec3_sub.push_back(vec3[i]);
 	}
