@@ -1,10 +1,11 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
 //vector <int> vec1;
-int k, l, n;
+int k, l, n, d, dd;
 float sum;
 void writing(vector<int>& vec1)
 {
@@ -56,27 +57,93 @@ void task2(void)
 	for (int i = 2; i < n; i++)
 		dd = vec2[i] - vec2[i - 1];
 	if (dd != d)
-		cout << "Massive is't progressive";
+		cout << "Не является арифметической прогрессией" << endl;
 	else
+		cout << "Перед нами арифметическая прогрессия, ее разность: " << dd;
 }
 
+void task3(void)
+{
+	cout << "N: ";
+	cin >> n;
+	vector <int> vec3;
+	vector <int> vec3_sub;
+	vec3.reserve(n);
+	reading(vec3, n);
+	sort(vec3.begin(), vec3.end());
+	for (int i = 1; i < vec3.size(); i += 2)
+	{
+		vec3_sub.push_back(vec3[i]);
+	}
+	sort(vec3_sub.begin(), vec3_sub.end());
+	cout << "Минимальный элемент с четным номером исходного массива(А2): " << vec3_sub[0] << endl;
+
+}
+
+void task4(void)
+{
+
+}
+
+void task5(void)
+{
+
+}
 int main()
 {
+	setlocale(LC_ALL, "Russian");
 	int z, count_while = 0;
+	cout << "Введите номер задания, если вы хотите покинуть программу введите 0:";
 	cin >> z;
-
-	while(count_while < 5)
-	switch (z)
+	
+	while (count_while < 5)
 	{
-	case 1:
-	{
-		task1();
-		count_while++;
-		break;
+		switch (z)
+		{
+		case 1:
+		{
+			task1();
+			count_while++;
+			break;
+		}
+		case 2:
+		{
+			task2();
+			count_while++;
+			break;
+		}
+		case 3:
+		{
+			task3();
+			count_while++;
+			break;
+		}
+		case 4:
+		{
+			task4();
+			count_while++;
+			break;
+		}
+		case 5:
+		{
+			task5();
+			count_while++;
+			break;
+		}
+		case 0:
+		{
+			cout << "Stop.";
+			return 0;
+			break;
+		}
+		default:
+		{
+			cout << "Wrong number" << endl;
+			break;
+		}
+		}
+		cout << "Введите номер задания, если вы хотите покинуть программу введите 0:";
+		cin >> z;
 	}
-	default:
-		break;
-	}
-
 	return 0;
 }
