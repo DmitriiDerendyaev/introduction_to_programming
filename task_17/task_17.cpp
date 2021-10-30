@@ -82,13 +82,43 @@ void task3(void)
 
 void task4(void)
 {
+	cout << "Введите размер массива N:";
+	cin >> n;
 
+	vector<int> vec4;
+	int maxim = 0;
+	vec4.reserve(n);
+	reading(vec4, n);
+	for (int i = 1; i < n - 1; i++)
+	{
+		if (vec4[i] > vec4[i - 1] and vec4[i] > vec4[i + 1])
+		{
+			maxim = vec4[i];
+		}
+	}
+	cout << "Последний локальный максимум вектора(массива): " << maxim << endl;
 }
 
 void task5(void)
 {
 
+	cout << "Введите размер массива N:";
+	cin >> n;
+
+	vector<int> vec5;
+	vec5.reserve(n);
+
+	reading(vec5, n);
+	for (int i = 0; i < n - 1; i++)
+	{
+		if (vec5[i] == vec5[i + 1])
+		{
+			cout << "Одинаковые элементы данного массива(в порядке возрастания):" << i + 1 /*min(vec5[i], vec5[i + 1])*/ << ", " << i + 2 /*max(vec5[i], vec5[i + 1])*/ << endl;
+		}
+	}
 }
+
+
 int main()
 {
 	setlocale(LC_ALL, "Russian");
