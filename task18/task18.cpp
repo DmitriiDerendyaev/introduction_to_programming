@@ -34,6 +34,19 @@ void writing(vector<int> vec)
 
 void task1(void)
 {
+	vector<int> vec1;
+	vector<int> vec2;
+
+	reading(vec1);
+	reading(vec2);
+
+	for (int i = 0; i < vec1.size(); i++)
+	{
+		swap(vec1[i], vec2[i]);
+	}
+
+	writing(vec1);
+	writing(vec2);
 
 }
 
