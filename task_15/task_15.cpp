@@ -6,12 +6,15 @@ using namespace std;
 int a, b, answ;
 const float pi = 3.14;
 float s, R1, R2, fac = 1, n = 0, i = 1;
+
 int PowerA3(int a)
 {
 	b = a * a * a;
+	//b = pow(a, 3);
 
 	return b;
 }
+
 void task1(void)
 {
 	cout << "Введите число А:";
