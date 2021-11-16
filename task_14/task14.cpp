@@ -95,7 +95,7 @@ void task6()
 {
 	cout << "¬ведите число N:";
 	cin >> n;
-	int f = 0, f1 = 0, f2 = 1, k = 0;
+	int f = 0, f1 = 0, f2 = 1, k = 2;
 	while (f < n)
 	{
 		f = f1 + f2;
