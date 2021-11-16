@@ -63,10 +63,6 @@ void task2(void)
 	clearing();
 
 	reading(vec1);
-	/*vec2.reserve(vec1.size() + 1);
-	fill_n(vec2.begin(), vec1.size(), 0);*/
-	
-	//reading(vec2);
 
 	vector<float> vec3(vec1.size());
 	summ = 0;
@@ -77,25 +73,43 @@ void task2(void)
 		vec3[i] = summ / (float)(i + 1);
 	}
 
-
-	/*cout << vec3[0];
-	for (int i = 1; i < vec3.size(); i++)
-	{
-		cout << ", " << vec3[i];
-	}*/
-	//writing(vec1);
 	writing(vec3);
 
 }
 
 void task3()
 {
+	clearing();
 
+	reading(vec1);
+
+	int last;
+	
+	for (int i = 0; i < vec1.size(); i++)
+	{
+		if (((int)vec1[i] % 2) != 0)
+		{
+			last = vec1[i];
+		}
+	}
+
+	for(int i = 0; i < vec1.size(); i++)
+		if ((int)vec1[i] % 2 != 0)
+		{
+			vec1[i] += last;
+		}
+
+	writing(vec1);
 }
+
+
 
 void task4()
 {
+	clearing();
 
+	reading(vec1);
+	
 }
 
 void task5()
