@@ -5,10 +5,12 @@
 
 using namespace std;
 
-int el;
-vector<int> vec;
+float el, summ = 0;
+vector<float> vec;
+vector<float> vec1;
+vector<float> vec2;
 
-void reading(vector<int> vec)
+void reading(vector<float>& vec)
 {
 	while (cin >> el)
 	{
@@ -23,20 +25,26 @@ void reading(vector<int> vec)
 	}
 }
 
-void writing(vector<int> vec)
+void writing(vector<float>& vec)
 {
 	cout << vec[0];
 	for (int i = 1; i < vec.size(); i++)
 	{
-		cout << ', ' << vec[i];
+		cout << ", " << vec[i];
 	}
+
+	cout << endl;
+}
+
+void clearing(void)
+{
+	vec1.clear();
+	vec2.clear();
 }
 
 void task1(void)
 {
-	vector<int> vec1;
-	vector<int> vec2;
-
+	cout << "You should fill two similar arrays." << endl;
 	reading(vec1);
 	reading(vec2);
 
@@ -52,6 +60,31 @@ void task1(void)
 
 void task2(void)
 {
+	clearing();
+
+	reading(vec1);
+	/*vec2.reserve(vec1.size() + 1);
+	fill_n(vec2.begin(), vec1.size(), 0);*/
+	
+	//reading(vec2);
+
+	vector<float> vec3(vec1.size());
+	summ = 0;
+
+	for (int i = 0; i < vec1.size(); i++)
+	{
+		summ += vec1[i];
+		vec3[i] = summ / (float)(i + 1);
+	}
+
+
+	/*cout << vec3[0];
+	for (int i = 1; i < vec3.size(); i++)
+	{
+		cout << ", " << vec3[i];
+	}*/
+	//writing(vec1);
+	writing(vec3);
 
 }
 
